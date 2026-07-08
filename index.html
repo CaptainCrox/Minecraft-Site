@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhterem Server - Topluluk Mod Paketi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Floating Blocks -->
+    <div class="floating-blocks">
+        <div class="block block-1"></div>
+        <div class="block block-2"></div>
+        <div class="block block-3"></div>
+        <div class="block block-4"></div>
+        <div class="block block-5"></div>
+        <div class="block block-6"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">⛏️</span>
+                <span class="logo-text">Muhterem Server</span>
+            </div>
+            <nav class="nav">
+                <button class="tab-btn active" data-tab="home">🏠 Ana Sayfa</button>
+                <button class="tab-btn" data-tab="about">📖 Hakkımızda</button>
+                <button class="tab-btn" data-tab="server">🖥️ Sunucu Bilgisi</button>
+                <button class="tab-btn" data-tab="version">📦 Sürüm Bilgisi</button>
+                <button class="tab-btn" data-tab="team">👥 Ekip</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- HOME TAB -->
+        <section class="tab-content active" id="tab-home">
+            <div class="hero">
+                <div class="hero-badge fade-in-up">🌌 Yayında ve Oyunda</div>
+                <h1 class="hero-title fade-in-up delay-1">
+                    Kesintisiz <span class="gradient-text">Macera</span> Başlıyor
+                </h1>
+                <p class="hero-subtitle fade-in-up delay-2">
+                    Topluluk Mod Paketi ile herkes için eşit, sorunsuz ve eğlenceli bir Minecraft deneyimi
+                </p>
+                <div class="hero-buttons fade-in-up delay-3">
+                    <button class="btn btn-primary" onclick="switchTab('server')">
+                        🎮 Sunucu IP'si
+                    </button>
+                    <button class="btn btn-secondary" onclick="switchTab('about')">
+                        📖 Daha Fazla Bilgi
+                    </button>
+                </div>
+                <div class="hero-quick-info fade-in-up delay-4">
+                    <div class="quick-chip">
+                        <span class="chip-icon">☕</span>
+                        <span>Java Edition</span>
+                    </div>
+                    <div class="quick-chip">
+                        <span class="chip-icon">📦</span>
+                        <span>Sürüm 26.2</span>
+                    </div>
+                    <div class="quick-chip">
+                        <span class="chip-icon">⚔️</span>
+                        <span>Survival</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT TAB -->
+        <section class="tab-content" id="tab-about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">🌌 Hakkımızda</h2>
+                    <p class="section-desc">Yayında ve Oyunda Kesintisiz Macera: Topluluk Mod Paketi!</p>
+                </div>
+
+                <div class="about-intro reveal">
+                    <p>
+                        Bu mod paketi, yayınlarımızda hep birlikte bir araya gelebileceğimiz, kimsenin bilgisayar engeline takılmadan sorunsuz bir şekilde katılabileceği ortak bir dünya kurmak amacıyla tasarlandı! Minecraft'ın o hepimizin çok sevdiği orijinal, hayatta kalma ruhunu hiç bozmadan, oyunu tamamen modern ve yaşayan bir dünyaya dönüştürüyoruz.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Herkes İçin Eşit ve Sorunsuz Erişim</h3>
+                        <p>
+                            Yayınlarımızın en büyük amacı hep birlikte eğlenmektir. Bu yüzden paketin temel felsefesi; sistemi yormayan, donma veya kasma yapmayan, en mütevazı bilgisayara sahip bir izleyicimizin bile sunucuya girdiğinde yağ gibi akan, akıcı bir deneyim yaşamasını sağlamaktır. "Bilgisayarım bu modu kaldırır mı?" endişesini tamamen ortadan kaldırıyoruz!
+                        </p>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🏔️</div>
+                        <h3>Göz Alıcı Ama Yorucu Olmayan Bir Dünya</h3>
+                        <p>
+                            Ağır ve bilgisayarları kilitleyen grafik modları yerine, oyunun kendi içindeki blokları, gökyüzünü ve doğayı çok daha estetik hale getiren özel dokular seçtik. Kafanızı kaldırdığınızda göreceğiniz gerçekçi bulutlar, derin vadiler ve heybetli dağlar, oyun keyfini görsel bir şölene dönüştürecek. Üstelik bu dünyada gezerken ormanın derinliklerindeki kuş seslerini, rüzgarın uğultusunu ve bastığınız zeminin tok seslerini duyarak kendinizi tamamen maceranın içinde hissedeceksiniz.
+                        </p>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Kafa Rahat, Güvenli Bir Hayatta Kalma Deneyimi</h3>
+                        <p>
+                            Sunucumuzda herkesin emeği güvende! Karmaşık kodlar veya komutlar ezberlemekle uğraşmadan, envanterinizdeki tek bir buton yardımıyla açılan harita üzerinden evinizi ve arazinizi saniyeler içinde koruma altına alabileceksiniz. Siz yayını izlerken veya oyunda yokken bile yapılarınız patlamalara, griflenmelere ve istenmeyen kazalara karşı tamamen korumalı olacak.
+                        </p>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Tek Tıkla Kurulum ve Otomatik Entegrasyon</h3>
+                        <p>
+                            Paketimiz, sunucuya giriş yaparken ihtiyacınız olan tüm kaynak paketlerini arka planda sizin yerinize otomatik olarak hazırlar. Size sadece modu klasörünüze atmak, yayındaki yerinizi almak ve bu büyük topluluğun bir parçası olarak bizimle birlikte inşa edip keşfetmek kalır!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVER INFO TAB -->
+        <section class="tab-content" id="tab-server">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">🖥️ Sunucu Bilgisi</h2>
+                    <p class="section-desc">Hemen bağlan ve maceraya katıl!</p>
+                </div>
+
+                <div class="server-card reveal">
+                    <div class="server-card-glow"></div>
+                    <div class="server-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">SUNUCU ÇEVRİMİÇİ</span>
+                    </div>
+                    <h3 class="server-label">İŞTE SUNUCU İP'MİZ:</h3>
+                    <div class="ip-box">
+                        <span class="ip-text" id="server-ip">muhterem.buz.redstone.tr:49443</span>
+                        <button class="copy-btn" onclick="copyIP()" id="copy-btn">
+                            <span class="copy-icon">📋</span>
+                            <span class="copy-text">Kopyala</span>
+                        </button>
+                    </div>
+                    <div class="server-details">
+                        <div class="detail-item">
+                            <span class="detail-label">📌 Sürüm</span>
+                            <span class="detail-value">26.2</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">☕ Platform</span>
+                            <span class="detail-value">Java Edition</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">🌍 Oyun Modu</span>
+                            <span class="detail-value">Survival</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">👥 Durum</span>
+                            <span class="detail-value">Aktif</span>
+                        </div>
+                    </div>
+                    <div class="server-note">
+                        <p>⚡ Hemen mod paketini indir, Minecraft'ını başlat ve aramıza katıl!</p>
+                    </div>
+                </div>
+
+                <div class="how-to-join reveal">
+                    <h3>🎯 Nasıl Katılırım?</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Mod Paketini İndir</h4>
+                                <p>Topluluk mod paketini indir ve Minecraft klasörüne yerleştir.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Sunucu IP'sini Ekle</h4>
+                                <p>Minecraft'ta Multiplayer kısmına gir ve sunucu IP'sini ekle.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Oyuna Katıl!</h4>
+                                <p>Bağlan ve bu büyük topluluğun bir parçası ol!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VERSION INFO TAB -->
+        <section class="tab-content" id="tab-version">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">📦 Sürüm Bilgisi</h2>
+                    <p class="section-desc">Güncel sürüm ve gereksinimler</p>
+                </div>
+
+                <div class="version-card reveal">
+                    <div class="version-badge">GÜNCEL</div>
+                    <div class="version-main">
+                        <h3 class="version-number">26.2</h3>
+                        <p class="version-name">Topluluk Mod Paketi — Java Edition</p>
+                    </div>
+                    <div class="version-divider"></div>
+                    <div class="version-info">
+                        <p>
+                            <strong>26.2 Sürümüdür.</strong>
+                        </p>
+                        <br>
+                        <p>
+                            <strong>Gereksinimler:</strong> Sunucumuzdaki modları indiriniz. Orijinal gerekmez, herkes gelebilir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="requirements-card reveal">
+                    <h3>📋 Gereksinimler</h3>
+                    <div class="req-list">
+                        <div class="req-item req-yes">
+                            <span class="req-icon">☕</span>
+                            <span>Java Edition desteklenir</span>
+                        </div>
+                        <div class="req-item req-yes">
+                            <span class="req-icon">✅</span>
+                            <span>Sunucumuzdaki modları indiriniz</span>
+                        </div>
+                        <div class="req-item req-yes">
+                            <span class="req-icon">✅</span>
+                            <span>Herkes katılabilir — Orijinal gerekmez</span>
+                        </div>
+                        <div class="req-item req-yes">
+                            <span class="req-icon">✅</span>
+                            <span>Düşük sistemli bilgisayarlar için optimize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TEAM TAB -->
+        <section class="tab-content" id="tab-team">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">👥 Ekibimiz</h2>
+                    <p class="section-desc">Sunucumuzu yöneten ve geliştiren kişiler</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card reveal">
+                        <div class="team-card-bg"></div>
+                        <div class="team-avatar">🧙</div>
+                        <h3 class="team-name">The_Biyik</h3>
+                        <div class="team-roles">
+                            <span class="role-badge role-owner">👑 Sunucu Sahibi</span>
+                            <span class="role-badge role-designer">🎨 Mod Dizaynırı</span>
+                        </div>
+                    </div>
+
+                    <div class="team-card reveal">
+                        <div class="team-card-bg"></div>
+                        <div class="team-avatar">⚔️</div>
+                        <h3 class="team-name">Crox3n</h3>
+                        <div class="team-roles">
+                            <span class="role-badge role-staff">🛡️ Yetkili</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-authority reveal">
+                    <h3>🔰 Yetkili Kişiler</h3>
+                    <div class="authority-names">
+                        <span class="authority-chip">Crox3n</span>
+                        <span class="authority-sep">&</span>
+                        <span class="authority-chip">The_Biyik</span>
+                    </div>
+                </div>
+
+                <div class="discord-card reveal">
+                    <div class="discord-glow"></div>
+                    <div class="discord-inner">
+                        <div class="discord-icon">💬</div>
+                        <div class="discord-text">
+                            <h3>Discord Sunucumuza Katıl!</h3>
+                            <p>Topluluğumuzla sohbet et, duyurulardan haberdar ol ve destek al.</p>
+                        </div>
+                        <a href="https://discord.gg/sr8B8eKBQp" target="_blank" class="discord-btn">
+                            <span>Discord'a Katıl</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p>⛏️ Muhterem Server &copy; 2026 — Tüm hakları saklıdır.</p>
+                <a href="https://discord.gg/sr8B8eKBQp" target="_blank" class="footer-discord">💬 Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
