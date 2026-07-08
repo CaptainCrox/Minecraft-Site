@@ -122,6 +122,118 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- MOD DETAIL SECTION -->
+                <div class="section-header reveal" style="padding-top: 40px;">
+                    <h2 class="section-title">🎨 Mod Detayı</h2>
+                    <p class="section-desc">Sunucumuzdaki modların dünyasına göz atın</p>
+                </div>
+
+                <div class="mod-detail-card reveal">
+                    <div class="mod-detail-bg"></div>
+                    <div class="mod-detail-content">
+                        <div class="mod-detail-text">
+                            <h3>🏔️ Gerçekçi Dağlar & Atmosfer</h3>
+                            <p>
+                                Mod paketimizde kullandığımız özel dünya oluşturma modları sayesinde, Minecraft'ın klasik kübik yapısını korurken bir yandan da nefes kesen manzaralar ortaya çıkıyor. Devasa dağ sıraları, karla kaplı zirveler, derin kanyonlar ve sisli vadiler — her biri el değmemiş bir doğa harikası gibi hissettiriyor.
+                            </p>
+                            <p>
+                                Atmosfer modları ise gökyüzünü tamamen dönüştürüyor. Gerçekçi bulut katmanları, gün doğumu ve batımındaki turuncu-pembe tonlar, geceleyin parlayan yıldızlar ve samanyolu... Yağmur yağarken oluşan pus efekti ve şimşek çakmaları, sizi Minecraft'ın hiç görmediğiniz kadar yaşayan bir dünyasına taşıyor.
+                            </p>
+                            <p>
+                                Ormanların içinden süzülen ışık huzmeleri, nehir kenarındaki ince sis tabakası, çayırda dans eden çiçekler — her detay, bu dünyayı gerçekten "yaşıyormuş" hissi verecek şekilde tasarlandı. Ve tüm bunlar, bilgisayarınızı yormadan, akıcı bir deneyimle!
+                            </p>
+                        </div>
+                        <div class="mod-detail-features">
+                            <div class="mod-feat">
+                                <span class="mod-feat-icon">🌄</span>
+                                <span>Gerçekçi Arazi</span>
+                            </div>
+                            <div class="mod-feat">
+                                <span class="mod-feat-icon">☁️</span>
+                                <span>Dinamik Bulutlar</span>
+                            </div>
+                            <div class="mod-feat">
+                                <span class="mod-feat-icon">🌅</span>
+                                <span>Atmosferik Işık</span>
+                            </div>
+                            <div class="mod-feat">
+                                <span class="mod-feat-icon">🌿</span>
+                                <span>Zengin Bitki Örtüsü</span>
+                            </div>
+                            <div class="mod-feat">
+                                <span class="mod-feat-icon">💧</span>
+                                <span>Gerçekçi Su</span>
+                            </div>
+                            <div class="mod-feat">
+                                <span class="mod-feat-icon">🌙</span>
+                                <span>Gece Gökyüzü</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHOTO GALLERY SECTION -->
+                <div class="section-header reveal" style="padding-top: 40px;">
+                    <h2 class="section-title">📸 Galerimiz</h2>
+                    <p class="section-desc">Sunucumuzdan görüntüler ve anlar</p>
+                </div>
+
+                <div class="gallery reveal">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox(0)">
+                            <img src="media/screenshot_1.png" alt="Sunucu Ekran Görüntüsü" loading="lazy">
+                            <div class="gallery-overlay"><span>🔍</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(1)">
+                            <img src="media/gameplay_2.gif" alt="Gameplay 1" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(2)">
+                            <img src="media/gameplay_3.gif" alt="Gameplay 2" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(3)">
+                            <img src="media/gameplay_4.gif" alt="Gameplay 3" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(4)">
+                            <img src="media/gameplay_5.gif" alt="Gameplay 4" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(5)">
+                            <img src="media/gameplay_6.gif" alt="Gameplay 5" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(6)">
+                            <img src="media/gameplay_7.gif" alt="Gameplay 6" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(7)">
+                            <img src="media/gameplay_8.gif" alt="Gameplay 7" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(8)">
+                            <img src="media/gameplay_9.gif" alt="Gameplay 8" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(9)">
+                            <img src="media/gameplay_10.gif" alt="Gameplay 9" loading="lazy">
+                            <div class="gallery-overlay"><span>▶️ GIF</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIGHTBOX -->
+                <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+                    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                    <button class="lightbox-prev" onclick="changeLightbox(-1, event)">&#10094;</button>
+                    <div class="lightbox-content">
+                        <img id="lightbox-img" src="" alt="Galeri">
+                    </div>
+                    <button class="lightbox-next" onclick="changeLightbox(1, event)">&#10095;</button>
+                    <div class="lightbox-counter" id="lightbox-counter"></div>
+                </div>
             </div>
         </section>
 
@@ -263,7 +375,8 @@
                         <h3 class="team-name">The_Biyik</h3>
                         <div class="team-roles">
                             <span class="role-badge role-owner">👑 Sunucu Sahibi</span>
-                            <span class="role-badge role-designer">🎨 Mod Dizaynırı</span>
+                            <span class="role-badge role-designer">🎨 Mod Sorumlusu</span>
+                            <span class="role-badge role-staff">🛡️ Yetkili</span>
                         </div>
                     </div>
 
@@ -272,6 +385,7 @@
                         <div class="team-avatar">⚔️</div>
                         <h3 class="team-name">Crox3n</h3>
                         <div class="team-roles">
+                            <span class="role-badge role-owner">👑 Sunucu Sahibi</span>
                             <span class="role-badge role-staff">🛡️ Yetkili</span>
                         </div>
                     </div>
@@ -303,6 +417,13 @@
             </div>
         </section>
     </main>
+
+    <!-- Floating Discord Button -->
+    <a href="https://discord.gg/sr8B8eKBQp" target="_blank" class="floating-discord" aria-label="Discord">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/>
+        </svg>
+    </a>
 
     <!-- Footer -->
     <footer class="footer">

@@ -138,7 +138,7 @@ observeReveals();
 
 // ===================== MOUSE GLOW EFFECT =====================
 document.addEventListener('mousemove', (e) => {
-    const cards = document.querySelectorAll('.feature-card, .server-card, .version-card, .requirements-card, .team-card, .discord-card');
+    const cards = document.querySelectorAll('.feature-card, .server-card, .version-card, .requirements-card, .team-card, .discord-card, .mod-detail-card');
     cards.forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -146,4 +146,58 @@ document.addEventListener('mousemove', (e) => {
         card.style.setProperty('--mouse-x', `${x}px`);
         card.style.setProperty('--mouse-y', `${y}px`);
     });
+});
+
+// ===================== LIGHTBOX GALLERY =====================
+const galleryImages = [
+    'media/screenshot_1.png',
+    'media/gameplay_2.gif',
+    'media/gameplay_3.gif',
+    'media/gameplay_4.gif',
+    'media/gameplay_5.gif',
+    'media/gameplay_6.gif',
+    'media/gameplay_7.gif',
+    'media/gameplay_8.gif',
+    'media/gameplay_9.gif',
+    'media/gameplay_10.gif'
+];
+
+let currentLightboxIndex = 0;
+
+function openLightbox(index) {
+    currentLightboxIndex = index;
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+    img.src = galleryImages[index];
+    counter.textContent = `${index + 1} / ${galleryImages.length}`;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(event) {
+    if (event && event.target !== event.currentTarget && !event.target.classList.contains('lightbox-close')) return;
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function changeLightbox(direction, event) {
+    if (event) event.stopPropagation();
+    currentLightboxIndex += direction;
+    if (currentLightboxIndex < 0) currentLightboxIndex = galleryImages.length - 1;
+    if (currentLightboxIndex >= galleryImages.length) currentLightboxIndex = 0;
+    const img = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+    img.src = galleryImages[currentLightboxIndex];
+    counter.textContent = `${currentLightboxIndex + 1} / ${galleryImages.length}`;
+}
+
+// Keyboard navigation for lightbox
+document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') changeLightbox(-1);
+    if (e.key === 'ArrowRight') changeLightbox(1);
 });
