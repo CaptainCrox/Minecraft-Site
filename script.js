@@ -86,6 +86,17 @@ tabBtns.forEach(btn => {
     btn.addEventListener('click', () => switchTab(btn.dataset.tab));
 });
 
+// ===================== TEAM CARD TOGGLE =====================
+function toggleTeamCard(card) {
+    const wasExpanded = card.classList.contains('expanded');
+    // Close all cards first
+    document.querySelectorAll('.team-card.expanded').forEach(c => c.classList.remove('expanded'));
+    // Toggle the clicked one
+    if (!wasExpanded) {
+        card.classList.add('expanded');
+    }
+}
+
 // ===================== COPY IP =====================
 function copyIP() {
     const ip = document.getElementById('server-ip').textContent;
